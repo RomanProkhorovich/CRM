@@ -1,13 +1,14 @@
-package model;
+package com.example.crm.model;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
 @Entity
+
 @Getter
 @Setter
 @Builder
@@ -19,7 +20,7 @@ public class Record {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    private LocalDateTime visitingDate;
+    private Calendar visitingDate;
 
     @ManyToMany(cascade = CascadeType.MERGE)
     @JoinTable(name = "record_service",

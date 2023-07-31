@@ -1,4 +1,4 @@
-package model;
+package com.example.crm.model;
 
 import jakarta.persistence.*;
 import lombok.*;

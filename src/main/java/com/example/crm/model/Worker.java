@@ -1,31 +1,18 @@
-package model;
+package com.example.crm.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.Objects;
 
 @Entity
-@Getter
+@Getter()
 @Setter
-@Builder
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class Worker {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id", nullable = false)
-    private Long id;
-
-    protected String firstname;
-    protected String lastname;
-    @NonNull
-    @Column(unique = true, nullable = false)
-    protected String email;
-    @NonNull
-    @Column(unique = true,nullable = false)
-    protected String phoneNumber;
+public class Worker extends Person {
     private float salary;
 
     @Override

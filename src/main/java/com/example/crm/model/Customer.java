@@ -1,30 +1,20 @@
-package model;
+package com.example.crm.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.Hibernate;
+import lombok.experimental.SuperBuilder;
 
 import java.util.Objects;
 
 @Entity
 @Getter
 @Setter
-@Builder
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id", nullable = false)
-    private Long id;
+public class Customer extends Person{
 
-    protected String firstname;
-    protected String lastname;
-    @Column(unique = true)
-    protected String email;
-    @NonNull
-    @Column(unique = true, nullable = false)
-    protected String phoneNumber;
+    private String status;
 
     @Override
     public boolean equals(Object o) {

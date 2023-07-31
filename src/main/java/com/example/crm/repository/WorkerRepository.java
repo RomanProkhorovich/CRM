@@ -1,7 +1,6 @@
-package repository;
+package com.example.crm.repository;
 
-import model.Customer;
-import model.Worker;
+import com.example.crm.model.Worker;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

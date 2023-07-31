@@ -1,8 +1,8 @@
-package repository;
+package com.example.crm.repository;
 
-import model.Service;
-import model.ServiceType;
-import model.Worker;
+import com.example.crm.model.Service;
+import com.example.crm.model.ServiceType;
+import com.example.crm.model.Worker;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
