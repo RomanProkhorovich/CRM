@@ -6,12 +6,13 @@ import lombok.experimental.SuperBuilder;
 
 import java.util.Objects;
 
-@Entity
+
 @Getter
 @Setter
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class Customer extends Person{
 
     private String status;
@@ -29,3 +30,7 @@ public class Customer extends Person{
         return Objects.hash(phoneNumber);
     }
 }
+
+
+
+

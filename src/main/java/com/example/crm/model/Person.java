@@ -7,21 +7,24 @@ import lombok.experimental.SuperBuilder;
 
 
 
-@MappedSuperclass
+
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 @Getter
 @Setter
-public class Person {
+@Entity
+public abstract class Person {
 
     @NotNull
     protected String firstname;
     @NotNull
     protected String lastname;
-    @Column(unique = true,nullable = true)
+    @NotNull
+    @Column(unique = true,nullable = false)
     protected String email;
+    @NotNull
     @Column(unique = true,nullable = false)
     protected  String username;
 

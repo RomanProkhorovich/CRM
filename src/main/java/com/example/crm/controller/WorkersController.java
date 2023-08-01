@@ -30,9 +30,9 @@ public class WorkersController {
             requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(description = "worker to save"),
             responses = {
                     @ApiResponse(responseCode = "201", description = "Worker created successfully. Returns saved worker"),
-                    @ApiResponse(responseCode = "460", description = "Email must not be null or empty"),
-                    @ApiResponse(responseCode = "461", description = "Phone number must not be null or empty"),
-                    @ApiResponse(responseCode = "465", description = "This user already exist")
+                    @ApiResponse(responseCode = "460", description = "Email, username and Phone number must not be null or empty"),
+                    @ApiResponse(responseCode = "465", description = "This user already exist"),
+                    @ApiResponse(responseCode = "461",description = "Invalid mail address")
             }
     )
     public ResponseEntity<WorkerDto> save(@RequestBody WorkerDto worker) {

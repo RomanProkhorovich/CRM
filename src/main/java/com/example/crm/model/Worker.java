@@ -6,12 +6,13 @@ import lombok.experimental.SuperBuilder;
 
 import java.util.Objects;
 
-@Entity
+
 @Getter()
 @Setter
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class Worker extends Person {
     private float salary;
 
